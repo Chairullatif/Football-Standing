@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.khoirullatif.footballstandings.databinding.FragmentLeaguesBinding
 
@@ -32,7 +33,7 @@ class LeaguesFragment : Fragment() {
         adapter.notifyDataSetChanged()
 
         showLoading(true)
-        binding.rvLeague.layoutManager = LinearLayoutManager(view.context)
+        binding.rvLeague.layoutManager = GridLayoutManager(view.context, 2)
         binding.rvLeague.adapter = adapter
 
         leaguesViewModel.getLeagues().observe(viewLifecycleOwner, {

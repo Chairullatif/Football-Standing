@@ -16,6 +16,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
         android:id="@+id/rv_league"
         tools:listitem="@layout/item_leagues" />
 

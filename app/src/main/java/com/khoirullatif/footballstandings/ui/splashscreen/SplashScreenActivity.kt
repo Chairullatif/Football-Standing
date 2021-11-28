@@ -26,7 +26,7 @@ class SplashScreenActivity : AppCompatActivity() {
         val firstTime = preferences.getString("FirstTimeInstall", "")
         Log.d("SplashScreen", "firstTime: $firstTime")
 
-        if (firstTime.equals("Yes")) {
+        if (firstTime.equals("No")) {
             activityScope.launch {
                 delay(3000)
                 val intent = Intent(this@SplashScreenActivity, LoginActivity::class.java)

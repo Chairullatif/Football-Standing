@@ -19,6 +19,7 @@ class OnBoardingActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         binding.btnSkip.setOnClickListener {
